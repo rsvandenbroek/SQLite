@@ -1,0 +1,25 @@
+<resources>
+    <!--
+        Gebruik uitsluitend platform-thema's omdat dit project bewust geen externe
+        Material Components dependency heeft. Een parent zoals
+        Theme.Material3.DayNight.NoActionBar bestaat alleen wanneer de Material
+        library is toegevoegd en veroorzaakt anders een AAPT link error.
+    -->
+    <style name="Theme.OmdbSearch" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/Theme.OmdbSearch" />
+
+    <!--
+        Compatibiliteitsalias voor templates of manifests die nog naar
+        @style/Theme.Material3.DayNight.NoActionBar verwijzen. Deze alias houdt
+        de build Java-only/Groovy-only zonder extra Material dependency.
+    -->
+    <style name="Theme.Material3.DayNight.NoActionBar" parent="@style/Theme.OmdbSearch" />
+</resources>

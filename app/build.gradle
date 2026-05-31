@@ -1,0 +1,19 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.example.omdbsearch'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.example.omdbsearch'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+        buildConfigField 'String', 'OMDB_API_KEY', '"8201083d"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
